@@ -8,6 +8,19 @@ body,
     "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   text-align: center;
 }
+* {
+  margin: 0;
+  padding: 0;
+}
+/*设置点击前的样式 */
+a {
+  text-decoration: none;
+}
+/*设置点击后的样式 */
+.router-link-active {
+  text-decoration: none;
+}
+
 abbr {
   border-bottom: none;
   text-decoration: none;
