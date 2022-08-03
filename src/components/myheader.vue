@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div class="meet">
     <span class="logo">Stomachache</span>
     <div class="director">
       <div
@@ -118,25 +118,25 @@ export default {
 };
 </script>
 <style scoped>
-.example-showcase .el-dropdown-link {
+/* .example-showcase .el-dropdown-link {
   cursor: pointer;
   color: var(--el-color-primary);
   display: flex;
   align-items: center;
-}
+} */
 .columeactive {
-  background-color: #ff7c7c;
+  background: linear-gradient(to bottom, #f9957e, #f3f5d0);
   color: white;
   cursor: pointer;
 }
 .isactive {
-  color: #ff7c7c;
+  color: #f9957e;
 }
 .notactive {
   color: #7b7b7b;
 }
 
-.main {
+.meet {
   display: flex;
   width: 100%;
   height: 100%;

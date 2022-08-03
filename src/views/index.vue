@@ -1,11 +1,23 @@
 <template>
   <div class="common-layout">
     <el-container>
-      <el-header :offset="100">
+      <el-header>
         <myheader></myheader>
       </el-header>
       <el-main>
-        <div class="test" style="height: 2000px">Main</div>
+        <el-image
+          style="width: 400px; height: 800px"
+          src="/backgroundimgs/keqing_01.png"
+          :fit="fit"
+          class="leftsideimg"
+        />
+        <div class="test" style="height: 2000px; width: 50%">Main</div>
+        <el-image
+          style="width: 400px; height: 800px"
+          src="/backgroundimgs/keqing_02.png"
+          :fit="fit"
+          class="rightsideimg"
+        />
       </el-main>
     </el-container>
   </div>
@@ -15,8 +27,16 @@
 import myheader from "../components/myheader.vue";
 export default {
   name: "index",
+  mounted() {
+    console.log(this.backgroundsrc);
+  },
   components: {
     myheader,
+  },
+  data() {
+    return {
+      // backgroundsrc: "/public/backgroundimgs/03.png",
+    };
   },
 };
 </script>
@@ -27,7 +47,7 @@ export default {
   width: 100%;
 }
 .el-header {
-  background-color: FFFFFF;
+  background-color: #ffffff;
   height: 80px;
   width: 100%;
   box-shadow: 0px 1px 30px #ababab;
@@ -35,8 +55,31 @@ export default {
   top: 0;
 }
 .el-main {
-  background-color: antiquewhite;
+  background-color: white;
   width: 100%;
   margin: 80px 0 0 0;
+  padding: 0;
+}
+.leftsideimg {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0.2;
+}
+.rightsideimg {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  opacity: 0.2;
+}
+.test {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background-color: antiquewhite;
+  z-index: 0;
+}
+.myheader {
+  z-index: 99;
 }
 </style>
