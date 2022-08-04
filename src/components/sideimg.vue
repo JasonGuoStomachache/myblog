@@ -9,7 +9,7 @@
         style="width: 100%; height: 100%; opacity: 0.2"
         src="/backgroundimgs/keqing_01.png"
         fit="fill"
-        v-show="leftshow"
+        v-show="leftshow && ScrollShow"
       />
     </div>
 
@@ -22,7 +22,7 @@
         style="width: 100%; height: 100%; opacity: 0.2"
         src="/backgroundimgs/keqing_02.png"
         fit="fill"
-        v-show="rightshow"
+        v-show="rightshow && ScrollShow"
       />
     </div>
   </div>
@@ -34,7 +34,22 @@ export default {
     return {
       leftshow: false,
       rightshow: false,
+      ScrollShow: false,
     };
+  },
+  mounted() {
+    window.addEventListener("scroll", this.sideimgwatchScroll, true);
+  },
+  methods: {
+    sideimgwatchScroll(e) {
+      let sideScrollY = e.target.scrollTop;
+      //  当滚动超过 60 时，实现吸顶效果
+      if (sideScrollY > 800) {
+        this.ScrollShow = true;
+      } else {
+        this.ScrollShow = false;
+      }
+    },
   },
 };
 </script>

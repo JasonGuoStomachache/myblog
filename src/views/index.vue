@@ -1,9 +1,7 @@
 <template>
   <div class="common-layout">
     <el-container>
-      <el-header>
-        <director-header></director-header>
-      </el-header>
+      <director-header></director-header>
       <el-main>
         <side-img></side-img>
         <div class="forhomeheader">
@@ -46,16 +44,15 @@ export default {
   width: 100%;
 }
 .el-header {
-  height: 60px;
   width: 100%;
-  position: fixed;
   top: 0;
   padding: 0;
+  margin: 0;
 }
 .el-main {
   background-color: white;
   width: 100%;
-  margin: 60px 0 0 0;
+  margin: 0;
   padding: 0;
 }
 
