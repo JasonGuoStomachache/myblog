@@ -8,10 +8,12 @@
         <el-image
           style="width: 400px; height: 800px"
           src="/backgroundimgs/keqing_01.png"
-          :fit="fit"
+          fit="fit"
           class="leftsideimg"
         />
-        <div class="test" style="height: 2000px; width: 50%">Main</div>
+        <div class="mainbody">
+          <router-view></router-view>
+        </div>
         <el-image
           style="width: 400px; height: 800px"
           src="/backgroundimgs/keqing_02.png"
@@ -72,14 +74,10 @@ export default {
   right: 20px;
   opacity: 0.2;
 }
-.test {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0%);
+.mainbody {
   background-color: antiquewhite;
-  z-index: 0;
-}
-.myheader {
-  z-index: 99;
+  margin: 0 25% 0 25%;
+  height: 2000px;
+  width: 50%;
 }
 </style>
