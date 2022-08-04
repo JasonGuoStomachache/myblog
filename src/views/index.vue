@@ -24,9 +24,7 @@ import homeheader from "../components/homeheader.vue";
 
 export default {
   name: "index",
-  mounted() {
-    // console.log(this.backgroundsrc);
-  },
+  mounted() {},
   components: {
     "director-header": directorheader,
     "side-img": sideimg,
@@ -35,8 +33,6 @@ export default {
   data() {
     return {
       // backgroundsrc: "/public/backgroundimgs/03.png",
-      leftshow: false,
-      rightshow: false,
     };
   },
 };
