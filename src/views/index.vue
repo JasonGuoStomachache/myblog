@@ -2,78 +2,67 @@
   <div class="common-layout">
     <el-container>
       <el-header>
-        <myheader></myheader>
+        <director-header></director-header>
       </el-header>
       <el-main>
-        <el-image
-          style="width: 400px; height: 800px"
-          src="/backgroundimgs/keqing_01.png"
-          fit="fit"
-          class="leftsideimg"
-        />
+        <side-img></side-img>
+        <div class="forhomeheader">
+          <home-header></home-header>
+        </div>
         <div class="mainbody">
           <router-view></router-view>
         </div>
-        <el-image
-          style="width: 400px; height: 800px"
-          src="/backgroundimgs/keqing_02.png"
-          :fit="fit"
-          class="rightsideimg"
-        />
       </el-main>
     </el-container>
   </div>
 </template>
 
 <script>
-import myheader from "../components/myheader.vue";
+import directorheader from "../components/directorheader.vue";
+import sideimg from "../components/sideimg.vue";
+import homeheader from "../components/homeheader.vue";
+
 export default {
   name: "index",
   mounted() {
-    console.log(this.backgroundsrc);
+    // console.log(this.backgroundsrc);
   },
   components: {
-    myheader,
+    "director-header": directorheader,
+    "side-img": sideimg,
+    "home-header": homeheader,
   },
   data() {
     return {
       // backgroundsrc: "/public/backgroundimgs/03.png",
+      leftshow: false,
+      rightshow: false,
     };
   },
 };
 </script>
 <style scoped>
 .common-layout,
-.el-container {
+.el-container,
+.forsideimg,
+.forhomeheader {
   height: 100%;
   width: 100%;
 }
 .el-header {
-  background-color: #ffffff;
-  height: 80px;
+  height: 60px;
   width: 100%;
-  box-shadow: 0px 1px 30px #ababab;
   position: fixed;
   top: 0;
+  padding: 0;
 }
 .el-main {
   background-color: white;
   width: 100%;
-  margin: 80px 0 0 0;
+  margin: 60px 0 0 0;
   padding: 0;
 }
-.leftsideimg {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  opacity: 0.2;
-}
-.rightsideimg {
-  position: fixed;
-  bottom: 0;
-  right: 20px;
-  opacity: 0.2;
-}
+
 .mainbody {
   background-color: antiquewhite;
   margin: 0 25% 0 25%;

@@ -13,7 +13,29 @@
         @mouseout="columemouseout"
         @click="redirect(m.linkto)"
       >
-        {{ m.name }}
+        <span v-if="m.isdropdown"
+          ><el-dropdown>
+            <span
+              style="font-weight: 600; font-size: 18px"
+              :class="{
+                columeactive: index === currentIndex,
+                notactive: index != currentIndex,
+              }"
+            >
+              {{ m.name }}
+            </span>
+            <template #dropdown>
+              <el-dropdown-menu>
+                <el-dropdown-item>Action 1</el-dropdown-item>
+                <el-dropdown-item>Action 2</el-dropdown-item>
+                <el-dropdown-item>Action 3</el-dropdown-item>
+                <el-dropdown-item disabled>Action 4</el-dropdown-item>
+                <el-dropdown-item divided>Action 5</el-dropdown-item>
+              </el-dropdown-menu>
+            </template>
+          </el-dropdown></span
+        >
+        <span v-else>{{ m.name }}</span>
       </div>
     </div>
 
@@ -69,7 +91,7 @@
 </template>
 <script>
 export default {
-  name: "header",
+  name: "myheader",
   data() {
     return {
       input: "",
@@ -80,26 +102,31 @@ export default {
           name: "主页",
           iconclass: "<HomeFilled />",
           linkto: "/home",
+          isdropdown: false,
         },
         {
-          name: "目录",
+          name: "归档",
           iconclass: "<List />",
           linkto: "/catalog",
+          isdropdown: true,
         },
         {
           name: "收集",
           iconclass: "<Management />",
           linkto: "/collection",
+          isdropdown: true,
         },
         {
           name: "开发手册",
           iconclass: "<InfoFilled />",
           linkto: "/programming",
+          isdropdown: false,
         },
         {
           name: "关于我",
           iconclass: "<Avatar />",
           linkto: "/about",
+          isdropdown: false,
         },
       ],
     };
@@ -125,8 +152,8 @@ export default {
   align-items: center;
 } */
 .columeactive {
-  background: linear-gradient(to bottom, #f9957e, #f3f5d0);
-  color: white;
+  /* background: linear-gradient(to bottom, #f9957e, #f3f5d0); */
+  color: #f9957e;
   cursor: pointer;
 }
 .isactive {
@@ -142,6 +169,10 @@ export default {
   height: 100%;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0px 1px 30px #ababab;
+  background-color: #ffffff;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
 }
 .logo {
   font-size: 20px;
@@ -162,6 +193,7 @@ export default {
   align-items: center;
   justify-content: center;
 }
+
 .profile {
   display: flex;
   width: 20%;
