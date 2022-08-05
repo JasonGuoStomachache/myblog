@@ -62,7 +62,6 @@ export default {
 .navBarHidden {
   display: none;
   top: 0;
-  z-index: 999;
 }
 .logo {
   font-size: 20px;

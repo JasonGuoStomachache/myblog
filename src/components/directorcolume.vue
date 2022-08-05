@@ -17,7 +17,6 @@
       <span v-if="m.isdropdown"
         ><el-dropdown>
           <span
-            style="font-weight: 600; font-size: 18px"
             :class="{
               columeactive: index === currentIndex,
               notactive: index != currentIndex,
@@ -36,7 +35,14 @@
           </template>
         </el-dropdown></span
       >
-      <span v-else>{{ m.name }}</span>
+      <span
+        v-else
+        :class="{
+          columeactive: index === currentIndex,
+          notactive: index != currentIndex,
+        }"
+        >{{ m.name }}</span
+      >
     </div>
   </div>
 </template>
@@ -137,6 +143,7 @@ export default {
   },
 };
 </script>
+<style scoped src="../assets/css/font.css"></style>
 <style scoped>
 .columeactive {
   /* background: linear-gradient(to bottom, #f9957e, #f3f5d0); */
@@ -148,8 +155,6 @@ export default {
 }
 
 .director {
-  font-weight: 600;
-  font-size: 18px;
   display: flex;
   width: 30%;
   height: 100%;

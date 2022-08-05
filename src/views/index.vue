@@ -4,12 +4,7 @@
       <director-header></director-header>
       <el-main>
         <side-img></side-img>
-        <div class="forhomeheader">
-          <home-header></home-header>
-        </div>
-        <div class="mainbody">
-          <router-view></router-view>
-        </div>
+        <router-view></router-view>
       </el-main>
     </el-container>
   </div>
@@ -18,7 +13,6 @@
 <script>
 import directorheader from "../components/directorheader.vue";
 import sideimg from "../components/sideimg.vue";
-import homeheader from "../components/homeheader.vue";
 
 export default {
   name: "index",
@@ -26,7 +20,6 @@ export default {
   components: {
     "director-header": directorheader,
     "side-img": sideimg,
-    "home-header": homeheader,
   },
   data() {
     return {
@@ -37,9 +30,7 @@ export default {
 </script>
 <style scoped>
 .common-layout,
-.el-container,
-.forsideimg,
-.forhomeheader {
+.el-container {
   height: 100%;
   width: 100%;
 }
@@ -54,12 +45,5 @@ export default {
   width: 100%;
   margin: 0;
   padding: 0;
-}
-
-.mainbody {
-  background-color: antiquewhite;
-  margin: 0 25% 0 25%;
-  height: 2000px;
-  width: 50%;
 }
 </style>
