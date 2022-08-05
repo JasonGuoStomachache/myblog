@@ -52,7 +52,7 @@ export default {
   margin: 0;
 }
 .el-main {
-  background-color: white;
+  background-color: antiquewhite;
   width: 100%;
   margin: 0;
   padding: 0;

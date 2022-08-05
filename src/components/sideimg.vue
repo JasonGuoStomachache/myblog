@@ -60,7 +60,6 @@ export default {
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 5;
 }
 .rightsideimg {
   width: 17%;
@@ -68,6 +67,5 @@ export default {
   position: fixed;
   bottom: 0;
   right: 2%;
-  z-index: 5;
 }
 </style>

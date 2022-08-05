@@ -34,7 +34,7 @@ export default {
   height: 100%;
 }
 .mainbody {
-  background-color: antiquewhite;
+  background-color: white;
   margin: 0 25% 0 25%;
   height: 2000px;
   width: 50%;

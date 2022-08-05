@@ -4,15 +4,15 @@
       <el-icon :size="20"><IceTea /></el-icon><span>{{ columetitle }}</span>
     </div>
     <hr style="width: 95%" />
-    <base-card v-for="o in 4"></base-card>
+    <img-card v-for="o in 4"></img-card>
   </div>
 </template>
 <script>
-import basecard from "@/components/basecard";
+import imgcard from "@/components/imgcard";
 export default {
   name: "homestart",
   components: {
-    "base-card": basecard,
+    "img-card": imgcard,
   },
   props: {
     columetitle: {
