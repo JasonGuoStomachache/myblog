@@ -11,6 +11,9 @@
       @mouseout="columemouseout"
       @click="redirect(m.linkto)"
     >
+      <el-icon :size="20">
+        <component :is="m.iconclass"></component>
+      </el-icon>
       <span v-if="m.isdropdown"
         ><el-dropdown>
           <span
@@ -46,13 +49,13 @@ export default {
       directorinfo: [
         {
           name: "主页",
-          iconclass: "<HomeFilled />",
+          iconclass: "HomeFilled",
           linkto: "/home",
           isdropdown: false,
         },
         {
           name: "归档",
-          iconclass: "<List />",
+          iconclass: "List",
           linkto: "/catalog",
           isdropdown: true,
           childrencolume: [
@@ -80,7 +83,7 @@ export default {
         },
         {
           name: "收集",
-          iconclass: "<Management />",
+          iconclass: "Management",
           linkto: "/collection",
           isdropdown: true,
           childrencolume: [
@@ -108,13 +111,13 @@ export default {
         },
         {
           name: "开发手册",
-          iconclass: "<InfoFilled />",
+          iconclass: "InfoFilled",
           linkto: "/programming",
           isdropdown: false,
         },
         {
-          name: "关于我",
-          iconclass: "<Avatar />",
+          name: "关于",
+          iconclass: "Avatar",
           linkto: "/about",
           isdropdown: false,
         },
