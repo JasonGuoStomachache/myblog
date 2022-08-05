@@ -1,5 +1,5 @@
 <template>
-  <div class="director">
+  <div class="directorcolume">
     <div
       class="colume"
       v-for="(m, index) in directorinfo"
@@ -143,7 +143,7 @@ export default {
   },
 };
 </script>
-<style scoped src="../assets/css/font.css"></style>
+<style scoped src="@/assets/css/font.css"></style>
 <style scoped>
 .columeactive {
   /* background: linear-gradient(to bottom, #f9957e, #f3f5d0); */
@@ -154,10 +154,11 @@ export default {
   color: #7b7b7b;
 }
 
-.director {
+.directorcolume {
   display: flex;
   width: 30%;
   height: 100%;
+  margin: 0 35%;
   justify-content: space-between;
 }
 .colume {

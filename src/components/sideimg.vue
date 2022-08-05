@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="sideimg">
     <div
       class="leftsideimg"
       @mouseover="leftshow = true"

@@ -1,7 +1,9 @@
 <template>
-  <div>关于我</div>
+  <div class="about">关于</div>
 </template>
 <script>
-export default {};
+export default {
+  name: "about",
+};
 </script>
 <style scoped></style>

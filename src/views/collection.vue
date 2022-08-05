@@ -1,7 +1,9 @@
 <template>
-  <div>收集</div>
+  <div class="collection">收集</div>
 </template>
 <script>
-export default {};
+export default {
+  name: "collection",
+};
 </script>
 <style scoped></style>

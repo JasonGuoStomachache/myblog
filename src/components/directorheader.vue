@@ -1,20 +1,16 @@
 <template>
-  <div class="nav" :class="isshow == true ? 'navBarShowed' : 'navBarHidden'">
-    <div class="meet">
-      <span class="logo">Stomachache</span>
+  <div class="directorheader">
+    <div class="nav" :class="isshow == true ? 'navBarShowed' : 'navBarHidden'">
       <director-colume></director-colume>
-      <director-profile></director-profile>
     </div>
   </div>
 </template>
 <script>
-import directorcolume from "../components/directorcolume.vue";
-import directorprofile from "../components/directorprofile.vue";
+import directorcolume from "@/components/directorcolume.vue";
 export default {
   name: "directorheader",
   components: {
     "director-colume": directorcolume,
-    "director-profile": directorprofile,
   },
   data() {
     return {
@@ -40,31 +36,26 @@ export default {
 <style scoped>
 .nav {
   width: 100%;
-  height: 60px;
-  box-sizing: border-box;
-  position: fixed;
-}
-.meet {
-  display: flex;
-  width: 100%;
   height: 100%;
-  align-items: center;
-  justify-content: space-between;
+  box-sizing: border-box;
   box-shadow: 0px 1px 30px #ababab;
   background-color: #ffffff;
 }
-
+.directorheader {
+  position: fixed;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+}
 .navBarShowed {
   display: block;
   top: 0;
-  z-index: 999;
+  z-index: 900;
 }
 .navBarHidden {
   display: none;
   top: 0;
-}
-.logo {
-  font-size: 20px;
-  width: 20%;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="homestart">
+  <div class="colume">
     <div class="introduction">
       <el-icon :size="20"><IceTea /></el-icon><span>{{ columetitle }}</span>
     </div>
@@ -31,10 +31,11 @@ export default {
   font-size: 18px;
   font-weight: 600;
 }
-.homestart {
+.colume {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 </style>

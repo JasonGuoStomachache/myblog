@@ -1,7 +1,9 @@
 <template>
-  <div>目录</div>
+  <div class="catalog">目录</div>
 </template>
 <script>
-export default {};
+export default {
+  name: "catalog",
+};
 </script>
 <style scoped></style>

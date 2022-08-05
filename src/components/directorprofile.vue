@@ -1,5 +1,5 @@
 <template>
-  <div class="profile">
+  <div class="directorprofile">
     <div class="left">
       <el-input
         v-model="input"
@@ -67,10 +67,15 @@ export default {
 .notactive {
   color: #7b7b7b;
 }
-.profile {
+.directorprofile {
+  position: fixed;
+  top: 1.5%;
+  right: 3%;
   display: flex;
-  width: 20%;
-  justify-content: space-between;
+  justify-content: flex-end;
+  width: 15%;
+  height: 40px;
+  z-index: 901;
 }
 .profile .left {
   display: flex;
@@ -78,8 +83,7 @@ export default {
 }
 .profile .right {
   display: flex;
-  margin-right: 20px;
-  width: 25%;
-  justify-content: space-between;
+  width: 30%;
+  justify-content: center;
 }
 </style>

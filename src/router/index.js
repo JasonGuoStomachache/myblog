@@ -1,15 +1,15 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Index from "../views/index.vue";
-import home from "../views/home.vue";
-import catalog from "../views/catalog.vue";
-import collection from "../views/collection.vue";
-import programming from "../views/programming.vue";
-import about from "../views/about.vue";
-import geek from "../views/catalog/geek.vue";
-import bookreview from "../views/catalog/bookreview.vue";
-import filmreview from "../views/catalog/filmreview.vue";
-import comprehension from "../views/catalog/comprehension.vue";
-import notes from "../views/catalog/notes.vue";
+import Index from "@/views/index.vue";
+import home from "@/views/home.vue";
+import catalog from "@/views/catalog.vue";
+import collection from "@/views/collection.vue";
+import programming from "@/views/programming.vue";
+import about from "@/views/about.vue";
+import geek from "@/views/catalog/geek.vue";
+import bookreview from "@/views/catalog/bookreview.vue";
+import filmreview from "@/views/catalog/filmreview.vue";
+import comprehension from "@/views/catalog/comprehension.vue";
+import notes from "@/views/catalog/notes.vue";
 
 const routes = [
   {

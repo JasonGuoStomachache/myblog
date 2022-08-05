@@ -1,18 +1,30 @@
 <template>
-  <el-card class="box-card" shadow="hover">
-    <template #header>
-      <div class="card-header">
-        <span>card name</span>
-        <el-button class="button" text>Operation button</el-button>
+  <div class="basecard">
+    <el-card class="box-card" shadow="hover">
+      <template #header>
+        <div class="card-header">
+          <span>card name</span>
+          <el-button class="button" text>Operation button</el-button>
+        </div>
+      </template>
+      <div v-for="o in 4" :key="o" class="text item">
+        {{ "List item " + o }}
       </div>
-    </template>
-    <div v-for="o in 4" :key="o" class="text item">{{ "List item " + o }}</div>
-  </el-card>
+    </el-card>
+  </div>
 </template>
 <script>
-export default {};
+export default {
+  name: "basecard",
+};
 </script>
 <style scoped>
+.basecard {
+  display: flex;
+  align-items: center;
+  width: 94%;
+  margin: 20px 3%;
+}
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -28,7 +40,6 @@ export default {};
 }
 
 .box-card {
-  width: 95%;
-  margin: 10px 0;
+  width: 100%;
 }
 </style>

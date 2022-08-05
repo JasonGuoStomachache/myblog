@@ -1,7 +1,9 @@
 <template>
-  <div>开发手册</div>
+  <div class="programming">开发手册</div>
 </template>
 <script>
-export default {};
+export default {
+  name: "programming",
+};
 </script>
 <style scoped></style>

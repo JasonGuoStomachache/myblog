@@ -4,18 +4,18 @@
       <home-header></home-header>
     </div>
     <div class="mainbody">
-      <home-start :columetitle="colume_1"></home-start>
+      <colume :columetitle="colume_1"></colume>
     </div>
   </div>
 </template>
 <script>
-import homeheader from "../components/homeheader.vue";
-import homestart from "../components/homestart.vue";
+import homeheader from "@/components/homeheader.vue";
+import colume from "@/components/colume.vue";
 export default {
   name: "home",
   components: {
     "home-header": homeheader,
-    "home-start": homestart,
+    colume: colume,
   },
   data() {
     return {
