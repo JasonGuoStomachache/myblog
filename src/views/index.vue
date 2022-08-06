@@ -1,11 +1,11 @@
 <template>
   <div class="index">
     <el-container>
-      <span class="logo">Stomachache</span>
+      <logo></logo>
       <director-profile></director-profile>
       <director-header></director-header>
       <el-main>
-        <side-img></side-img>
+        <!-- <side-img></side-img> -->
         <router-view></router-view>
       </el-main>
     </el-container>
@@ -16,6 +16,7 @@
 import directorprofile from "@/components/directorprofile.vue";
 import directorheader from "@/components/directorheader.vue";
 import sideimg from "@/components/sideimg.vue";
+import logo from "@/components/logo";
 
 export default {
   name: "index",
@@ -24,6 +25,7 @@ export default {
     "director-profile": directorprofile,
     "director-header": directorheader,
     "side-img": sideimg,
+    logo: logo,
   },
   data() {
     return {
@@ -32,18 +34,11 @@ export default {
   },
 };
 </script>
-<style scoped src="@/assets/css/font.css"></style>
 <style scoped>
 .index,
 .el-container {
   height: 100%;
   width: 100%;
-}
-.logo {
-  position: fixed;
-  top: 2%;
-  left: 3%;
-  z-index: 901;
 }
 .el-header {
   width: 100%;
