@@ -8,7 +8,6 @@
           :src="article.articlecover"
         />
       </div>
-      <!-- <hr class="horizonecolume" style="height: 80%" /> -->
       <div class="cardright">
         <div class="cardtitle">
           <p class="articletitile">{{ article.articletitile }}</p>
@@ -18,7 +17,7 @@
             }}&nbsp;&nbsp;{{ article.articletime.nowWeek }}
           </p>
         </div>
-        <hr class="horizonerow" style="width: 95%" />
+        <hr class="horizonerow" style="width: 100%" />
         <div class="cardintroduction">
           <p class="articleintroduction">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{
