@@ -6,14 +6,14 @@
     </div>
     <div class="mainbody">
       <colume :columetitle="colume_1"
-        ><article-list requirepath="nopath"></article-list
+        ><img-card-list requirepath="nopath"></img-card-list
       ></colume>
     </div>
   </div>
 </template>
 <script>
 import directorheader from "@/components/directorheader.vue";
-import articlelist from "@/components/articlelist.vue";
+import imgcardlist from "@/components/imgcardlist.vue";
 import homecover from "@/components/forhome/homecover.vue";
 import colume from "@/components/colume.vue";
 export default {
@@ -21,8 +21,8 @@ export default {
   components: {
     "director-header": directorheader,
     "home-cover": homecover,
-    colume: colume,
-    "article-list": articlelist,
+    colume,
+    "img-card-list": imgcardlist,
   },
   data() {
     return {

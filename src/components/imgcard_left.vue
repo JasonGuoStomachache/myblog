@@ -12,9 +12,8 @@
             }}
           </p>
           <p class="articleauthor">
-            &nbsp;&nbsp;<el-icon :size="15"><Coordinate /></el-icon>&nbsp;{{
-              article.articleauthor
-            }}
+            &nbsp;&nbsp;<el-icon :size="15"><Coordinate /></el-icon
+            >&nbsp;创作者：{{ article.articleauthor }}
           </p>
         </div>
         <hr style="width: 95%" />

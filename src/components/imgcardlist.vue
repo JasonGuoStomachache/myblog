@@ -1,5 +1,5 @@
 <template>
-  <div class="articlelist">
+  <div class="imgcardlist">
     <img-card-left v-for="o in 2" :key="o" :article="article"></img-card-left>
     <img-card-right v-for="p in 2" :key="p" :article="article"></img-card-right>
   </div>
@@ -16,7 +16,7 @@ export default {
     ] = this.$store.getters.setNowTimes;
     console.log(this.requirepath);
   },
-  name: "articlelist",
+  name: "imgcardlist",
   components: {
     "img-card-left": imgcard_left,
     "img-card-right": imgcard_right,
@@ -46,7 +46,7 @@ export default {
 };
 </script>
 <style socped>
-.articlelist {
+.imgcardlist {
   width: 100%;
 }
 </style>
