@@ -28,6 +28,7 @@
       </div>
       <div class="cardright">
         <img
+          alt="loading ! ! !"
           style="
             width: 100%;
             height: 100%;
@@ -35,7 +36,6 @@
             border-bottom-right-radius: 15px;
           "
           :src="article.articlecover"
-          alt="loading ! ! !"
         />
       </div>
     </div>
@@ -72,7 +72,7 @@ export default {
   box-shadow: darkgrey 0px 0px 5px 2px;
 }
 .mycard:hover {
-  box-shadow: rgb(138, 138, 138) 0px 0px 15px 3px;
+  box-shadow: rgb(138, 138, 138) 0px 0px 12px 3px;
 }
 .cardleft {
   height: 90%;

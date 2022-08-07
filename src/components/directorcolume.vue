@@ -10,6 +10,7 @@
       @mouseover="columemouseover(index)"
       @mouseout="columemouseout"
       @click="redirect(m.linkto)"
+      :key="index"
     >
       <el-icon :size="20">
         <component :is="m.iconclass"></component>
@@ -29,6 +30,7 @@
               <el-dropdown-item
                 v-for="n in m.childrencolume"
                 @click="redirect(n.linkto)"
+                :key="n.id"
                 >{{ n.name }}</el-dropdown-item
               >
             </el-dropdown-menu>
@@ -68,22 +70,27 @@ export default {
             {
               name: "极客",
               linkto: "/geek",
+              id: 0,
             },
             {
               name: "文摘",
               linkto: "/bookreview",
+              id: 1,
             },
             {
               name: "影评",
               linkto: "/filmreview",
+              id: 2,
             },
             {
               name: "随想",
               linkto: "/comprehension",
+              id: 3,
             },
             {
               name: "笔记",
               linkto: "/notes",
+              id: 4,
             },
           ],
         },

@@ -3,7 +3,6 @@
     <el-container>
       <logo></logo>
       <director-profile></director-profile>
-      <director-header></director-header>
       <el-main>
         <!-- <side-img></side-img> -->
         <router-view></router-view>
@@ -14,7 +13,7 @@
 
 <script>
 import directorprofile from "@/components/directorprofile.vue";
-import directorheader from "@/components/directorheader.vue";
+
 import sideimg from "@/components/sideimg.vue";
 import logo from "@/components/logo";
 
@@ -23,14 +22,11 @@ export default {
   mounted() {},
   components: {
     "director-profile": directorprofile,
-    "director-header": directorheader,
     "side-img": sideimg,
     logo: logo,
   },
   data() {
-    return {
-      // backgroundsrc: "/public/backgroundimgs/03.png",
-    };
+    return {};
   },
 };
 </script>
@@ -47,7 +43,7 @@ export default {
   margin: 0;
 }
 .el-main {
-  background-color: antiquewhite;
+  background-color: white;
   width: 100%;
   margin: 0;
   padding: 0;

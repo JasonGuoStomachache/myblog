@@ -1,25 +1,33 @@
 <template>
   <div class="home">
+    <director-header :isalwaystop="alwaystop"></director-header>
     <div class="forhomeheader">
-      <home-header></home-header>
+      <home-cover></home-cover>
     </div>
     <div class="mainbody">
-      <colume :columetitle="colume_1"></colume>
+      <colume :columetitle="colume_1"
+        ><article-list requirepath="nopath"></article-list
+      ></colume>
     </div>
   </div>
 </template>
 <script>
-import homeheader from "@/components/homeheader.vue";
+import directorheader from "@/components/directorheader.vue";
+import articlelist from "@/components/articlelist.vue";
+import homecover from "@/components/forhome/homecover.vue";
 import colume from "@/components/colume.vue";
 export default {
   name: "home",
   components: {
-    "home-header": homeheader,
+    "director-header": directorheader,
+    "home-cover": homecover,
     colume: colume,
+    "article-list": articlelist,
   },
   data() {
     return {
       colume_1: "START:DASH!!",
+      alwaystop: false,
     };
   },
 };
